@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapFood Site</title>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Welcome to SnapFood!</h1>
+    <p>This is a minimal site using the existing manifest and service worker.</p>
+
+    <script>
+        // Register service worker if it exists
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+            .then(() => console.log('Service worker registered'))
+            .catch(err => console.error('Service worker failed', err));
+        }
+    </script>
+</body>
+</html>
